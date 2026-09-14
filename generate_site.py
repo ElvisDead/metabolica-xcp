@@ -183,7 +183,7 @@ async def build() -> None:
         slug = str(item["slug"])
         title = str(item.get("title") or asset)
 
-        state = await load_state(asset, force=True, cache_seconds=CACHE_SECONDS, api_base=API_BASE)
+        state = await load_state(asset, force=True)
         state["ruleset"] = RULESET_VERSION
         state["fingerprint"] = state_fingerprint(state)
         state["updated_at"] = datetime.now(timezone.utc).isoformat()
