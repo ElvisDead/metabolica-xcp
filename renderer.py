@@ -14,20 +14,20 @@ from PIL import Image, ImageDraw
 RULESET_VERSION = os.getenv("RULESET_VERSION", "metabolika-pixel-v0.2.0")
 
 # Тёмный фон
-BG = (5, 8, 18, 255)
+BG = (16, 18, 26, 255)
 
 # Тусклое "дородовое" состояние, если событий нет
 PREBIRTH = (105, 111, 122, 40)
 
 # Цвета событий: RGBA
 COLORS: dict[str, tuple[int, int, int, int]] = {
-    "BIRTH": (95, 220, 255, 30),
-    "FAIRMINT": (90, 220, 255, 28),
-    "ISSUANCE": (90, 180, 255, 24),
-    "TRANSFER": (255, 255, 255, 24),
-    "BTC_SALE": (255, 210, 80, 26),
-    "XCP_SALE": (120, 255, 140, 26),
-    "BURN": (255, 90, 90, 28),
+    "BIRTH": (95, 220, 255, 70),
+    "FAIRMINT": (90, 220, 255, 65),
+    "ISSUANCE": (90, 180, 255, 55),
+    "TRANSFER": (245, 245, 245, 52),
+    "BTC_SALE": (255, 200, 55, 62),
+    "XCP_SALE": (90, 235, 125, 62),
+    "BURN": (235, 65, 75, 72),
 }
 
 # Базовый размер облака по типу события
