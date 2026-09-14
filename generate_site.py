@@ -13,7 +13,7 @@ from renderer import render_png, render_png_rect, render_svg, state_fingerprint
 ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
 ASSETS_FILE = ROOT / "assets.json"
-RULESET_VERSION = os.getenv("RULESET_VERSION", "metabolika-pixel-v0.1")
+RULESET_VERSION = os.getenv("RULESET_VERSION", "metabolika-pixel-v0.2.0")
 CACHE_SECONDS = int(os.getenv("CACHE_SECONDS", "60"))
 API_BASE = os.getenv("COUNTERPARTY_API_BASE", "https://api.counterparty.io:4000/v2").rstrip("/")
 SITE_BASE_URL = os.getenv("SITE_BASE_URL", "").rstrip("/")
