@@ -44,12 +44,25 @@ def load_assets() -> list[dict[str, Any]]:
 def metadata_payload(asset: str, slug: str, title: str, base_url: str) -> dict[str, Any]:
     return {
         "asset": asset,
+        "name": title,
         "description": (
             f"{title}. Dynamic image generated deterministically from Counterparty on-chain history. "
             f"Ruleset: {RULESET_VERSION}."
         ),
         "image": f"{base_url}/{slug}.png",
         "website": f"{base_url}/{slug}/",
+        "images": [
+            {
+                "type": "icon",
+                "size": "48x48",
+                "data": f"{base_url}/{slug}.png"
+            },
+            {
+                "type": "standard",
+                "size": "560x400",
+                "data": f"{base_url}/{slug}-card.png"
+            }
+        ]
     }
 
 
